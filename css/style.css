@@ -1,80 +1,281 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-:root {
-    --clr-main: #730285;
-    --clr-white:#ececec;
-    --clr-grey: #bebaba;
-    --clr-violet: #5e016e;  
-}
-
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-h1, h2, h3, p, a, ul {
+:root {
+    --color-principal: #043038;
+    --color-secundario: #fff;
+    --color-terciario: #f39c12;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
     margin: 0;
+    line-height: 1.5;
+    padding-top: 0;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    width: 100%; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    background-color: var(--color-principal);
+    padding: 30 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    height: 200px;
+    margin: 0;
+}
+
+.navbar .navbar-brand img {
+    max-width: 200px;
+    height: auto;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 15px;
+    max-width: 200px; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--color-secundario);
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+    overflow: hidden; 
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--color-terciario); 
+}
+
+main {
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center; 
+    padding-top: 220px;
+}
+
+
+.titulo h1 {
+    font-size: 68px;
+    color: var(--color-secundario);
+    margin-bottom: 10px;
+    width: 100%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.titulo span {
+    font-size: 36px;
+    color: var(--color-secundario); 
+}
+
+.mainContent {
+    max-width: 1000px; 
+    margin: 0 auto; 
+    font-size: 28px;
+    color: var(--color-secundario);
+    line-height: 1.6; 
+    padding: 20px;
+}
+
+.recomendaciones {
+    max-width: 880px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1f3b4d;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 24px;
+    color: var(--color-secundario);
+}
+
+.recomendaciones h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--color-terciario); 
+}
+
+.recomendaciones p {
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 880px;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--color-secundario);
+    border-radius: 8px;
+    color: var(--color-principal);
+}
+
+.container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.balance {
+    background-color: var(--color-principal); 
+    color: var(--color-secundario);
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.balance.changed {
+    transform: scale(1.05); 
+}
+
+.transaction-form {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--color-secundario);
+    border-radius: 8px;
+}
+
+.transaction-form input{
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid var(--color-secundario);
+}
+
+.transaction-form button {
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.transaction-form button:hover {
+    background-color: var(--color-terciario);
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-secundario);
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.transactions {
+    margin-top: 30px;
+}
+
+#transactionList {
+    list-style-type: none;
     padding: 0;
 }
 
-nav ul{
-    list-style-type: none
+#transactionList li {
+    background-color: var(--color-secundario);
+    border: 1px solid var(--color-secundario);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
-a{
-    text-decoration: none;
+.ganancia {
+    border-left: 5px solid #4caf50;
+    background-color: #e8f5e9;
 }
 
-.wrapper {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    background-color: var(--clr-main);
+.gasto {
+    border-left: 5px solid #f44336;
+    background-color: #ffebee;
 }
 
-aside {
-    padding: 2rem;
-    color: var(--clr-white);
-    position:sticky;
-    top: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between ;
-
+.transactions h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: var(--color-principal);
 }
 
-.logo {
-    font-weight: 400;
-    font-size: 1.3rem;
+#bitcoin-price{
+    max-width: 880px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1f3b4d;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 24px;
+    color: var(--color-secundario);
 }
 
-.texto-footer {
-    color: var(--clr-grey);
-    font-size: .85rem;
+
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-main{
-    background-color: var(--clr-violet);
-    margin: 1rem;
-    margin-left: 0;
-    border-radius: 2rem;
-    padding: 3rem;
-}
+@media (max-width: 768px) {
+    .navbar .navbar-brand img {
+        max-width: 120px; 
+    }
 
-.titulo-principal{
-    color: var(--clr-white);
-    margin-bottom: 2rem;
-}
-.contenedor-productos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    .titulo h1 {
+        font-size: 30px; 
+    }
 
-}
+    .titulo span {
+        font-size: 16px; 
+    }
 
-producto-img {
-     max-width: 100%;
-     border-radius: 1rem ;
+    .mainContent {
+        font-size: 16px; 
+    }
 
+    .recomendaciones p{
+        font-size: 14px; 
+    }
+
+    .container {
+        padding: 15px; 
+    }
+
+    .transaction-form input,
+    .transaction-form button {
+        font-size: 14px; 
+    }
+
+    .transactions h3 {
+        font-size: 18px; 
+    }
 }

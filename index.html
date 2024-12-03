@@ -4,79 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+    <title>Gestión de Finanzas Personales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-
-
-    <title>Cosmeticos</title>
-    <style>
-        body { font-family: Arial, sans-serif; }
-        .producto { margin: 10px 0; }
-    </style>
 </head>
 <body>
-    <div class="wrapper">
-        <aside>
-            <header>
-                <h1 class="logo">Athenea</h1>
-            </header>
-            <nav>
-                <ul style="list-style: none;">
-                    <li><button class="boton-categoria active"><i class="bi bi-emoji-heart-eyes"></i>Todos los productos</button></li>
-                    <li><button class="boton-categoria"><i class="bi bi-emoji-smile-fill"></i>Rostro</button></li>
-                    <li><button class="boton-categoria"><i class="bi bi-eye"></i>Ojos</button></li>
-                    <li><button class="boton-categoria"><i class="bi bi-emoji-kiss-fill"></i>Labios</button></li>
-                    <li><a class= "boton-carrito" href="./carrito.html"><i class="bi bi-cart4"></i>Carrito <span class="numerito">0</span></a>
-                    </li>
-                </ul>
-            </nav>
-            <footer></footer>
-                <p class="texto-footer">© 2024 Athenea</p>
-            </footer>
-        </aside>
-        <main>
-            <h2 class="titulo-principal">Todos los productos</h2>
-            <div class="contenedor-productos">
-                <div class="producto">
-                    <img class="producto-img" src="./img/fondotintacompactocrema.jpg" alt="Fondo tinta compacto en crema">
-                    <div class="producto-detalles">
-                        <h3 class="producto-titulo">Fondo tinta compacto en crema</h3>
-                        <p class="producto-precio">$3.000</p>
-                        <button class="producto-agregar">agregar</button>
-                    </div>
-                <div class="producto">
-                    <img class="producto-img" src="./img/delineadorengel.jpg" alt="Delineador negro en gel">
-                    <div class="producto-detalles">
-                        <h3 class="producto-titulo">Delineador negro en gel</h3>
-                        <p class="producto-precio">$2.500</p>
-                        <button class="producto-agregar">agregar</button>
-                    </div>
-                <div class="producto">
-                    <img class="producto-img" src="./img/lipgloss.jpg" alt="Lipgloss Rosa">
-                    <div class="producto-detalles">
-                        <h3 class="producto-titulo">Lipgloss Rosa</h3>
-                        <p class="producto-precio">$1.500</p>
-                        <button class="producto-agregar">agregar</button>
-                    </div>
-                <div class="producto">
-                    <img class="producto-img" src="./img/sombracobre.jpg" alt="Sombra color cobrizo">
-                    <div class="producto-detalles">
-                        <h3 class="producto-titulo">Sombra color cobrizo</h3>
-                        <p class="producto-precio">$2.200</p>
-                        <button class="producto-agregar">agregar</button>
-                    </div>
-                <div class="producto">
-                    <img class="producto-img" src="./img/mascaraefectovolumen.jpg" alt="Mascara color negro para tener mas volumen">
-                    <div class="producto-detalles">
-                        <h3 class="producto-titulo">Mascara color negro para el volumen</h3>
-                        <p class="producto-precio">$3.200</p>
-                        <button class="producto-agregar">agregar</button>
-                    </div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#home">
+                    <img src="./img/logo.png" alt="SmartBudget Logo">
+                </a>
+                <div class="navbar-nav">
+                    <a class="nav-link" href="#home">Inicio</a>
+                    <a class="nav-link" href="#recomendaciones">Recomendaciones</a>
+                    <a class="nav-link" href="#misFinanzas">Mis Finanzas</a>
                 </div>
             </div>
+        </nav>
+    </header>
+        <main id="home">
+            <div class="titulo">
+                <h1>SmartBudget</h1>
+                <span>Ahorrá más, gastá mejor</span>
+            </div>
+            <div class="mainContent">
+                <p>
+                    La organización de las finanzas personales es una tarea que requiere tiempo, metodología y paciencia, dado que estamos obligados a seguir unos pasos sistemáticos, si realmente queremos tener una economía doméstica y familiar libre de sobresaltos.
+                </p>
+            </div>
         </main>
-    </div>
-    <script src="./js/main.js"></script>
+    <!-- Sección de Recomendaciones -->
+        <section id="recomendaciones">
+            <div class="recomendaciones">
+                <h2>Recomendaciones</h2>
+                <p><strong>1. Conoce cómo se comporta y se mueve tu dinero.</strong></p>
+                <p>Es fundamental saber cuánto ganas y cuánto gastas para tener claro tu panorama financiero y poder asignar dinero a ahorro e inversión.
+                </p>
+                <p><strong>2. Establece metas financieras que sean realistas y alcanzables.</strong></p>
+                <p>Define objetivos financieros realistas que se ajusten a tus capacidades, considerando lo que realmente puedes ahorrar sin afectar tus necesidades diarias.
+                </p>
+                <p><strong>3. Siempre ten un ahorro para cualquier gasto imprevisto.</strong></p>
+                <p> Reserva una cantidad de dinero para emergencias, como enfermedades o accidentes, para enfrentar situaciones inesperadas con tranquilidad.
+                </p>
+                <p><strong>4. Realiza un presupuesto detallado que se adapte a tu estrategia.</strong></p>
+                <p>Crea presupuestos que cubran tus obligaciones y metas de ahorro, adaptándolos a tu situación actual y revisándolos regularmente.
+                </p>
+                <p><strong>5. Recuerda tomar decisiones en familia.</strong></p>
+                <p>Involucra a tu familia en el proceso financiero para contar con su apoyo, compartir responsabilidades y generar ideas conjunt
+                </p>
+                <p><strong>6. Mantén un registro detallado de todo tu plan.</strong></p>
+                <p>Mantén un control detallado de tus acciones y resultados financieros para identificar lo que funciona y lo que debe mejorarse.
+                </p>
+                <p><strong>7. Establece los momentos en los que necesitas usar tu dinero.</strong></p>
+                <p>Identifica los pagos grandes y puntuales (como impuestos o seguros) y ajusta tu presupuesto para afrontarlos sin problemas.
+                </p>
+                <p><strong>8. Revisa y actualiza tu plan constantemente.</strong></p>
+                <p>Actualiza tu plan financiero conforme cambian tus ingresos o gastos, para mantenerlo alineado con tus nuevas necesidades o metas.
+                </p>
+                <h3>
+                Este enfoque te ayudará a gestionar mejor tu dinero, ahorrar y alcanzar tus objetivos financieros a largo plazo.
+                </h3>
+            </div>
+        </section>
+<!-- Sección de Mis Finanzas -->
+        <section id="misFinanzas">
+            <div class="container">
+                <h1>Gestión de Finanzas Personales</h1>
+            
+                <div class="balance">
+                    <h2>Saldo Total: <span id="balance">$0</span></h2>
+                </div>
+
+                <div class="transaction-form">
+                    <h3>Agregar Transacción</h3>
+                    <input type="text" id="descriptionInput" placeholder="Descripción" required>
+                    <input type="number" id="amountInput" placeholder="Monto" required>
+                    <div>
+                        <label>
+                            <input type="radio" name="type" value="ganancia" checked> Ingreso
+                        </label>
+                        <label>
+                            <input type="radio" name="type" value="gasto"> Gasto
+                        </label>
+                    </div>
+                    <button id="addTransactionButton">Agregar Transacción</button>
+                </div>
+
+                <div class="transactions">
+                    <h3>Transacciones</h3>
+                    <ul id="transactionList"></ul>
+                </div>
+            </div>
+        </section>
+    
+        <div id="bitcoin-price"></div>
+        
+        
+    
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>
